@@ -52,7 +52,6 @@ def print_indices(items):
         print number, items[number]
 
 
-
 def foods_in_common(foods1, foods2):
     """Find foods in common.
 
@@ -81,7 +80,18 @@ def foods_in_common(foods1, foods2):
 
     """
 
-    return ['the wrong thing']
+    list_of_common_foods = []
+    unique_foods = {}
+
+    foods1 = set(foods1)
+    foods2 = set(foods2)
+    unique_foods = foods1 & foods2
+
+    for food in unique_foods:
+        list_of_common_foods.append(food)
+        list_of_common_foods.sort()
+
+    return "list_of_common_foods"
 
 
 def every_other_item(items):
@@ -98,7 +108,10 @@ def every_other_item(items):
        ['you', 'are', 'good', 'at', 'code']
     """
 
-    return ['the wrong thing']
+    items = items[0::2]
+
+
+    return items
 
 
 def largest_n_items(items, n):
