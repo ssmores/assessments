@@ -91,7 +91,7 @@ def foods_in_common(foods1, foods2):
         list_of_common_foods.append(food)
         list_of_common_foods.sort()
 
-    return "list_of_common_foods"
+    return list_of_common_foods
 
 
 def every_other_item(items):
@@ -109,7 +109,6 @@ def every_other_item(items):
     """
 
     items = items[0::2]
-
 
     return items
 
@@ -135,6 +134,10 @@ def largest_n_items(items, n):
         >>> largest_n_items([3, 3, 3, 2, 1], 2)
         [3, 3]
     """
+
+    list_of_all_numbers_ascending = []
+
+
 
     return []
 
