@@ -20,11 +20,9 @@ def all_odd(numbers):
     list_of_odd_values = []
 
     for num in numbers:
-        if type(num) == int or type(num) == float or type(num) == bool:
+        if type(num) == int or type(num) == float:
             if num % 2 == 1:
                 list_of_odd_values.append(num)
-        else: 
-            list_of_odd_values.append("The value of '" + num + "'' is not a number.")
 
     return list_of_odd_values
 
@@ -137,9 +135,18 @@ def largest_n_items(items, n):
 
     list_of_all_numbers_ascending = []
 
+    for item in items:
+        if n == 0:
+            return list_of_all_numbers_ascending
+        elif type(item) == str:
+            print "There is a string in this list, which is: %s" % (item)
+        elif type(item) == int or type(item) == float:
+            list_of_all_numbers_ascending.append(item)
+            list_of_all_numbers_ascending.sort()
+        
+        list_of_all_numbers_ascending = list_of_all_numbers_ascending[-n:]
 
-
-    return []
+    return list_of_all_numbers_ascending
 
 
 #####################################################################
